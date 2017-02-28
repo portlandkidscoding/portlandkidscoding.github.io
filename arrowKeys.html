@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='//fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<style>
+
+img {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.floatingBoxImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 7px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+
+
+<body>
+  <div class="center">
+      
+      <span class="bigLogo">PKC</span><br>
+      <span class="smallLogo">Portland Kids Coding</span>
+      <hr>
+      
+      <div class="buttonClass">
+        <a href="refresherMenu.html" class="button">Back to all Refresher Lessons</a>
+      </div>
+      
+      
+      <div class="lessonTitle">Movement: Arrow Keys</div>
+      
+      <!-- FIRST IMAGE --> 
+      <img class="floatingBoxImg" id="01_01" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <!-- FIRST CAPTION --> 
+      <div class="floatingBox">Click on the sprite you want to control with the arrow keys!</div>
+  <hr>
+    <div class="lessonSubTitle" id="oTitle1" onclick="stepToggle(1)">> Option 1: Simple</div>
+  <hr>
+	<div id="option1" style="display: none;">
+      <img class="floatingBoxImg" id="01_02" src="http://i.dailymail.co.uk/i/pix/2013/10/13/article-0-19977126000005DC-109_634x377.jpg" width="340" height="180">
+      <div class="floatingBox">In events, drag the [when (space) key pressed] 
+      block into your workspace and choose (up arrow).</div>
+  <hr>
+      <img class="floatingBoxImg" id="01_03" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Now we need to tell the sprite <b>what</b> it needs 
+      to do when the up arrow key is pressed.<br>Go to motion and choose [point in direction (90)].</div>
+  <hr>
+      <img class="floatingBoxImg" id="01_04" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Click the small black arrow and choose ((0) up).<br>"0" is the same as up here because 
+      this is how Scratch marks direction: <!--INCLUDE A DIRECTION CHART HERE MAKE THAT SHIT FLOAT--></div>
+  <hr>
+      <img class="floatingBoxImg" id="01_05" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Now, if you run the game (by clicking the Green Flag!) and press the up arrow key, your 
+      character points up but doesn't move. That's because we didn't tell it to move yet!<br>So now we can choose the 
+      [move (10) steps] block. Test your game again (green flag!) and see your berryBro move up 10 steps! Adjust the number
+      to what you want it. I want 5. </div>
+  <hr>
+      <img class="floatingBoxImg" id="01_06" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Now, repeat this process for the other 3 directions, and your berryBro will have freedom
+      at last.<br>Note: to make your berryBro stop flipping upside down when it moves left, click on the blue "i" on your
+	  sprite and then click on the left-right arrows outlined in this screencap.</div>
+
+  <hr>
+	</div>
+    <div class="lessonSubTitle" id="oTitle2" onclick="stepToggle(2)">> Option 2: Complex but Smoother</div>
+  <hr>
+	<div id="option2" style="display: none;">
+      <img class="floatingBoxImg" id="01_07" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">This option makes movement smoother but can be harder to understand for beginners.<br>
+      Select the [when green flag clicked] block and put a blank [repeat until] under it.<br>A [repeat until] with nothing
+      in it acts exactly like a [forever] block! </div>
+  <hr>
+      <img class="floatingBoxImg" id="01_08" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Add an [if] and then go to the sensing category and find [key (space) pressed]. Change
+      it to (up arrow) and put it inside the [if].</div>
+  <hr>
+      <img class="floatingBoxImg" id="01_09" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Now we need to tell the sprite <b>what</b> it needs 
+      to do when the up arrow key is pressed.<br>Go to motion and choose [point in direction (90)].</div>
+  <hr>
+      <img class="floatingBoxImg" id="01_10" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Click the small black arrow and choose ((0) up).<br>"0" is the same as up here because 
+      this is how Scratch marks direction: <!--INCLUDE A DIRECTION CHART HERE MAKE THAT SHIT FLOAT--></div>
+  <hr>
+      <img class="floatingBoxImg" id="01_11" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Now, if you run the game (by clicking the Green Flag!) and press the up arrow key, your 
+      character points up but doesn't move. That's because we didn't tell it to move yet!<br>So now we can choose the 
+      [move (10) steps] block. Test your game again (green flag!) and see your berryBro move up 10 steps! Adjust the number
+      to what you want it. I want 5. </div>
+  <hr>
+      <img class="floatingBoxImg" id="01_12" src="http://i.imgur.com/hJLk6hj.png" width="340" height="180">
+      <div class="floatingBox">Now, repeat this process for the other 3 directions, and your berryBro will have freedom
+      at last.<br>Note: to make your berryBro stop flipping upside down when it moves left, click on the blue "i" on your
+	  sprite and then click on the left-right arrows outlined in this screencap.</div>
+    </div>
+  </div>
+  
+
+      
+      
+      
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="currentImg">
+        </div>
+
+
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    var imgs = [];
+
+    for(var i=1; i<13; i++) {
+      if(i<10) imgs[i] = document.getElementById('01_0'+i);
+      else imgs[i] = document.getElementById('01_'+i);
+      imgs[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    }
+
+    var modalImg = document.getElementById("currentImg");
+    
+
+
+    
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+     }
+    }
+    var modalImg = document.getElementsByClassName("modal-content")[0];
+      modalImg.onclick = function() { 
+      modal.style.display = "none";
+    }
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ("key" in evt) {
+          isEscape = (evt.key == "Escape" || evt.key == "Esc");
+      } else {
+          isEscape = (evt.keyCode == 27);
+      }
+      if (isEscape) {
+          modal.style.display = "none";
+      }
+    };
+
+	var stepToggle = function(option) {
+      var stepDiv = document.getElementById("option"+option);
+      var titleDiv = document.getElementById("oTitle"+option);
+      if(stepDiv.style.display != "none") {
+        stepDiv.style.display = "none";
+        titleDiv.innerHTML = titleDiv.innerHTML.replace(/v/, ">");
+      }
+      else {
+        stepDiv.style.display = "block";
+        titleDiv.innerHTML = titleDiv.innerHTML.replace(/&gt;/, "v");
+      }
+    }
+
+    </script>
+
+</body>
+</html>

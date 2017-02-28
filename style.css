@@ -1,0 +1,112 @@
+.button {
+    background-color: #80cbc4;
+    border: none;
+    color: black;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-family:'Open Sans';
+    font-size:16px;
+}
+
+.buttonClass{
+    padding-left:50px;
+}
+
+.lessonNavigation{
+    padding-left:50px;
+    padding-top:30px;
+}
+.lessonHeader{
+    font-size:18px;
+}
+.lessonTitle{
+    font-family:'Francois One';
+    color:#414654;
+    font-size:24px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:80px;
+}
+.lessonSubTitle{
+    font-family:'Francois One';
+    color:#414654;
+    font-size:24px;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:80px;
+	cursor:pointer;
+}
+li a{
+  color:#414654;
+}
+li{
+    padding:3px;
+}
+
+body {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    padding-top:15px;
+}
+
+.bigLogo{
+    font-family: 'Francois One';
+    font-size: 64px;
+    color:#303f9f;
+    font-weight:bold;
+    line-height: 44px;
+    height: 45px;
+    padding-left:30px;
+}
+
+.smallLogo{
+    font-family: 'Francois One';
+    font-size: 24px;
+    color:#5c6bc0;
+    line-height: 44px;
+    height: 45px;
+    padding-left:30px;
+}
+
+.center {
+    margin: auto;
+    width: 75%;
+    border: none;
+    padding: 10px;
+}
+
+.floatingBox {
+    display: inline-block;
+    /*border:2px solid blue;*/
+    vertical-align:middle;
+    width:60%;
+}
+.floatingBoxImg{
+  display:inline-block;
+  /*border:2px solid blue;*/
+  vertical-align:middle;
+}
+
+img{
+  padding-left:40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
