@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='//fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<style>
+
+img {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.floatingBoxImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 7px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+
+
+<body>
+  <div class="center">
+      
+      <span class="bigLogo">PKC</span><br>
+      <span class="smallLogo">Portland Kids Coding</span>
+      <hr>
+      
+      <div class="buttonClass">
+        <a href="refresherMenu.html" class="button">Back to all Refresher Lessons</a>
+      </div>
+      
+      
+      <div class="lessonTitle">Movement: Mouse</div>
+      
+      <!-- FIRST IMAGE --> 
+      <img class="floatingBoxImg" id="01_01" src="01_01.png" width="340" height="180">
+      <!-- FIRST CAPTION --> 
+      <div class="floatingBox">Click on the sprite you want to control with the mouse!</div>
+
+  <hr>
+      <img class="floatingBoxImg" id="01_02" src="01_02.png" width="340" height="180">
+      <div class="floatingBox">In events, select the [when green flag clicked] block and put a blank [repeat until] under it.
+      <br>A [repeat until] with nothing in it acts exactly like a [forever] block! </div>
+  <hr>
+      <img class="floatingBoxImg" id="01_03" src="01_03.png" width="340" height="180">
+      <div class="floatingBox">Go to motion and select the [point towards (mouse-pointer)] block. <br>
+      Press the green flag to test your code. Right now your berryBro should be spinning to face where your mouse cursor is!</div>
+  <hr>
+      <img class="floatingBoxImg" id="01_04" src="01_04.png" width="340" height="180">
+      <div class="floatingBox">But berryBro isn't moving! This is because we haven't told it to move yet, just point towards
+      our mouse. <br> Now we can choose the [move (10) steps] block. Test your game again (green flag!) and see your berryBro 
+      chase your mouse. Adjust the number if he's going too fast. I want 2 steps.</div>
+  <hr>
+      <img class="floatingBoxImg" id="01_05" src="01_05.png" width="340" height="180">
+      <div class="floatingBox">To make your berryBro stop freaking out when it gets to your mouse, we have to tell it that it
+       can only move if it's not already touching the mouse pointer.<br>Choose an [if] block from control and drag it around the 
+       movement code, inside of your [repeat until]. Then find a [not] block in operators and put it in the [if]. Finally, 
+       find the [touching (mouse-pointer)] block in sensing and put it inside the [not].<br> Now your berryBro will only 
+       move if it's not already touching the mouse pointer! </div>
+    <hr>
+      <img class="floatingBoxImg" id="01_06" src="01_06.png" width="340" height="180">
+      <div class="floatingBox">To make your berryBro stop flipping upside down when it moves left, click on the blue "i" 
+      on your sprite and then click on the left-right arrows outlined in this screencap.<br>
+      Congratulations! Your berryBro is now controlled by your mouse! </div>
+
+  <hr>
+	
+    
+  </div>
+  
+
+      
+      
+      
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="currentImg">
+        </div>
+
+
+
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    var imgs = [];
+
+    for(var i=1; i<13; i++) {
+      if(i<10) imgs[i] = document.getElementById('01_0'+i);
+      else imgs[i] = document.getElementById('01_'+i);
+      imgs[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    }
+
+    var modalImg = document.getElementById("currentImg");
+    
+
+
+    
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+     }
+    }
+    var modalImg = document.getElementsByClassName("modal-content")[0];
+      modalImg.onclick = function() { 
+      modal.style.display = "none";
+    }
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ("key" in evt) {
+          isEscape = (evt.key == "Escape" || evt.key == "Esc");
+      } else {
+          isEscape = (evt.keyCode == 27);
+      }
+      if (isEscape) {
+          modal.style.display = "none";
+      }
+    };
+
+	var stepToggle = function(option) {
+      var stepDiv = document.getElementById("option"+option);
+      var titleDiv = document.getElementById("oTitle"+option);
+      if(stepDiv.style.display != "none") {
+        stepDiv.style.display = "none";
+        titleDiv.innerHTML = titleDiv.innerHTML.replace(/v/, ">");
+      }
+      else {
+        stepDiv.style.display = "block";
+        titleDiv.innerHTML = titleDiv.innerHTML.replace(/&gt;/, "v");
+      }
+    }
+
+    </script>
+
+</body>
+</html>

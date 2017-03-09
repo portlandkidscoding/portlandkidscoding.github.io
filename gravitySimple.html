@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='//fonts.googleapis.com/css?family=Francois One' rel='stylesheet'>
+  <link href='//fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+<style>
+
+img {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.floatingBoxImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 7px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+
+
+
+<body>
+  <div class="center">
+      
+      <span class="bigLogo">PKC</span><br>
+      <span class="smallLogo">Portland Kids Coding</span>
+      <hr>
+      
+      <div class="buttonClass">
+        <a href="refresherMenu.html" class="button">Back to all Refresher Lessons</a>
+      </div>
+      
+      
+      <div class="lessonTitle">REQUIRES TESTING PASSION Gravity: Simple</div>
+      
+  <!-- FIRST IMAGE --> 
+      <img class="floatingBoxImg" id="05_01" src="05_01.png" width="340" height="180">
+  <!-- FIRST CAPTION --> 
+      <div class="floatingBox">First, we're going to use the <a href="movementArrowKeys.html">Complex Arrow Key Movement Lesson</a>
+      to make the cat move and then remove the up and down code so he can't fly, just move left and right along the floor.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_02" src="05_02.png" width="340" height="180">
+      <div class="floatingBox">Now, click on the background sprite and pick the color you want the ground to be. I want blue.
+      Use the line tool to click and drag a floor on your background.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_03" src="05_03.png" width="340" height="180">
+      <div class="floatingBox">Click back to the cat and his scripts.<br>In events, drag in a [when green
+       flag clicked] and fill it with a [forever] and an [if].</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_04" src="05_04.png" width="340" height="180">
+      <div class="floatingBox">In operators, find the [not] block. We are going to tell the cat to move down if he's
+      not touching the blue floor. Put the [not] block in the [if] block.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_05" src="05_05.png" width="340" height="180">
+      <div class="floatingBox">In sensing, find the [touching color ()] block. Drag it into the [not].<br>
+      Click on the color square and then click on your line to set the color.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_06" src="05_06.png" width="340" height="180">
+      <div class="floatingBox">To make the cat fall if he's not touching that color, we'll get the [change y by (10)] 
+      block from movement. Running your code (green flag) now will show the cat rising up to the sky, desperately 
+      searching for your ground color. Change the (10) to a (-10) to make him fall instead.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_07" src="05_07.png" width="340" height="180">
+      <div class="floatingBox">If you run your code (click the green flag!) and drag the cat up and let go, 
+      you'll see that he falls until he hits the "ground" in your game. Congratulations: you coded gravity.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_08" src="05_08.png" width="340" height="180">
+      <div class="floatingBox">But, gravity isn't very interesting unless you can jump. So drag a [when (space) key 
+      pressed] block in from events to start coding in jumping. <br> Get another [change y by (10)] block from movement
+      since the last time we used it it made the cat go up like an endless jump. Change the (10) to (50) and run your
+      code. Test it by pressing the space bar!</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_09" src="05_09.png" width="340" height="180">
+      <div class="floatingBox">It's a solid jump at the moment, but I want it to look cooler. I'll change the [change 
+      y by (50)] to a (20) and put a [repeat (10)] block around it instead. Make it a [repeat (5)].
+      <br> Now when I test it the jump looks smoother.</div>
+  <hr>
+      <img class="floatingBoxImg" id="05_10" src="05_10.png" width="340" height="180">
+      <div class="floatingBox">To get you started on whatever gravity game you're planning, draw some more lines in
+      your ground color on your background. Once you get the spacing right and mess with your jump height, the cat can 
+      jump around! </div>
+  <hr>
+      <img class="floatingBoxImg" id="05_11" src="05_11.png" width="340" height="180">
+      <div class="floatingBox">Optional step: If you want to make it impossible to jump infinitely, we can add code to
+      make the player wait until they've touched the ground to jump a second time. <br>Simply get a [wait until] block
+      from control and put it at the bottom of your space bar jumping code. Then right click on your [touching color (blue)]
+      block and duplicate it to fill the [wait until]. Now the cat is forced to wait until he touches down to leap
+      again.</div>
+    
+  </div>
+  
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="currentImg">
+        </div>
+
+    <script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    var imgs = [];
+
+    for(var i=1; i<12; i++) {
+      if(i<10) imgs[i] = document.getElementById('05_0'+i);
+      else imgs[i] = document.getElementById('05_'+i);
+      imgs[i].onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+    }
+
+    var modalImg = document.getElementById("currentImg");
+    
+
+
+    
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+     }
+    }
+    var modalImg = document.getElementsByClassName("modal-content")[0];
+      modalImg.onclick = function() { 
+      modal.style.display = "none";
+    }
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var isEscape = false;
+      if ("key" in evt) {
+          isEscape = (evt.key == "Escape" || evt.key == "Esc");
+      } else {
+          isEscape = (evt.keyCode == 27);
+      }
+      if (isEscape) {
+          modal.style.display = "none";
+      }
+    };
+
+	var stepToggle = function(option) {
+      var stepDiv = document.getElementById("option"+option);
+      var titleDiv = document.getElementById("oTitle"+option);
+      if(stepDiv.style.display != "none") {
+        stepDiv.style.display = "none";
+        titleDiv.innerHTML = titleDiv.innerHTML.replace(/v/, ">");
+      }
+      else {
+        stepDiv.style.display = "block";
+        titleDiv.innerHTML = titleDiv.innerHTML.replace(/&gt;/, "v");
+      }
+    }
+
+    </script>
+
+</body>
+</html>
