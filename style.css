@@ -15,12 +15,13 @@
 }
 
 .buttonClass{
+    padding-top:10px;
     padding-left:50px;
 }
 
 .lessonNavigation{
     padding-left:50px;
-    padding-top:30px;
+    padding-top:10px;
 }
 .lessonHeader{
     font-size:18px;
@@ -62,16 +63,21 @@ body {
     font-weight:bold;
     line-height: 44px;
     height: 45px;
-    padding-left:30px;
+    display: inline-block;
 }
 
+.wordsLogo{
+  display:inline-block;
+  width:60%;
+  vertical-align:middle;
+}
 .smallLogo{
     font-family: 'Francois One';
     font-size: 24px;
     color:#5c6bc0;
     line-height: 44px;
     height: 45px;
-    padding-left:30px;
+    display: inline-block;
 }
 
 .center {
@@ -79,6 +85,18 @@ body {
     width: 75%;
     border: none;
     padding: 10px;
+}
+.headerUnSquish{
+  width:80%;
+  margin: auto;
+  border: none;
+}
+.photoLogo{
+  display:inline-block;
+  vertical-align:middle;
+  position:relative;
+  top:-10px;
+  cursor: pointer;
 }
 
 .floatingBox {
@@ -91,15 +109,32 @@ body {
   display:inline-block;
   /*border:2px solid blue;*/
   vertical-align:middle;
-}
-
-img{
   padding-left:40px;
+
 }
 
-
-
-
+.picCC{
+  display:inline-block;
+  width:40%;
+  margin-top:40px;
+  vertical-align:top;
+}
+.introWordsBG{
+  background:#5c6bc0;
+  display:inline-block;
+  width:40%;
+  border-radius:30px;
+  margin-right:30px;
+  margin-top:50px;
+  margin-left:30px;
+  padding-top:10px;
+  padding-right:20px;
+  padding-left:20px;
+  padding-bottom:10px;
+  color:#ffffff;
+  position:relative;
+  top:-30px;
+}
 
 
 
